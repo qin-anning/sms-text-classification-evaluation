@@ -1,12 +1,10 @@
 # 短信安全文本分类与模型评估
 
-> 课程项目展示稿｜文本分析 · 分类评估 · 业务决策
+> 文本分析 · 分类评估 · 业务决策
 
 ## 项目概览
 
 本项目以虚构的移动通信运营商为业务场景，探讨如何识别垃圾短信，同时减少正常短信被错误标记的风险。基于公开英文短信语料，使用 SAS Visual Text Analytics 设计和调整分类规则，并分析精确率、召回率及错误案例。
-
-这是课程项目，不是企业上线项目。本文为整理后的展示草稿，公开前请确认课程规则与素材使用权限。
 
 ## 业务问题
 
@@ -44,20 +42,18 @@
 
 ## 工具与说明
 
-工具：SAS Visual Text Analytics、CSV 数据整理。项目涉及公开短信语料；展示时不公开原始短信中的电话号码或其他个人识别信息。原始数据来源及使用条件参见数据集页面；代码、课程素材和截图的公开权限需另行确认。
+工具：SAS Visual Text Analytics、CSV 数据整理。项目涉及公开短信语料；展示时不公开原始短信中的电话号码或其他个人识别信息。原始数据来源及使用条件参见数据集页面。
 
 
 ---
 
 # SMS Safety: Text Classification and Model Evaluation
 
-> Course project draft | Text analytics · Classification evaluation · Business decision-making
+> Text analytics · Classification evaluation · Business decision-making
 
 ## Project overview
 
 Using a hypothetical mobile operator as a business scenario, this project explores how to identify spam SMS while reducing the risk of incorrectly flagging legitimate messages. It uses a public English-language SMS corpus and SAS Visual Text Analytics to develop and refine classification rules, then analyses precision, recall and error cases.
-
-This is a course project, not a deployed business system. This portfolio draft should only be made public after confirming course rules and rights to use the materials.
 
 ## Business problem
 
@@ -95,4 +91,4 @@ In this internal comparison on the course dataset, the refined rules reduced fal
 
 ## Tools and notes
 
-Tools: SAS Visual Text Analytics and CSV data preparation. The source corpus is public, but raw phone numbers and other personal identifiers should not be included in the portfolio. See the dataset page for source and licence details; permissions for publishing code, course materials and screenshots must be checked separately.
+Tools: SAS Visual Text Analytics and CSV data preparation. The source corpus is public, but raw phone numbers and other personal identifiers should not be included in the portfolio. See the dataset page for source and licence details.
