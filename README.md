@@ -45,3 +45,54 @@
 ## 工具与说明
 
 工具：SAS Visual Text Analytics、CSV 数据整理。项目涉及公开短信语料；展示时不公开原始短信中的电话号码或其他个人识别信息。原始数据来源及使用条件参见数据集页面；代码、课程素材和截图的公开权限需另行确认。
+
+
+---
+
+# SMS Safety: Text Classification and Model Evaluation
+
+> Course project draft | Text analytics · Classification evaluation · Business decision-making
+
+## Project overview
+
+Using a hypothetical mobile operator as a business scenario, this project explores how to identify spam SMS while reducing the risk of incorrectly flagging legitimate messages. It uses a public English-language SMS corpus and SAS Visual Text Analytics to develop and refine classification rules, then analyses precision, recall and error cases.
+
+This is a course project, not a deployed business system. This portfolio draft should only be made public after confirming course rules and rights to use the materials.
+
+## Business problem
+
+Rules that are too permissive may miss spam, while rules that are too strict may incorrectly flag legitimate personal messages and service notices. This scenario prioritises reducing false positives and routes matching messages for human review rather than blocking them automatically.
+
+## Data and methods
+
+- Source: [UCI SMS Spam Collection](https://archive.ics.uci.edu/dataset/228/sms+spam+collection).
+- The original corpus contains 5,574 English SMS messages; 5,160 remain after removing exact text duplicates.
+- Checked duplicates, missing values and borderline labels; identified features such as contact channels, prize offers, calls to action and urgency cues.
+- Built and refined rules using SAS Visual Text Analytics and examined precision, recall, false positives and false negatives.
+
+## Results of rule refinement
+
+| Metric | Baseline | Refined |
+| --- | ---: | ---: |
+| Precision | 77.63% | 92.29% |
+| Recall | 88.63% | 78.35% |
+| False positives | 164 | 42 |
+| False negatives | 73 | 139 |
+
+In this internal comparison on the course dataset, the refined rules reduced false positives but missed more spam messages. This trade-off aligns with the scenario's priority of avoiding wrongful flags; it does not establish readiness for automatic blocking.
+
+## Error analysis
+
+- Legitimate messages may contain phone numbers, so relying on numbers alone can create false positives.
+- Spam using short codes, spaced numbers or charge descriptions may be missed by the existing rules.
+- Phrases such as “call now” can appear in both promotions and personal conversations and require contextual interpretation.
+
+## Limitations and next steps
+
+- The rules were developed and evaluated on the same corpus, not an independent test set; the results may overstate performance on new data.
+- The historical English-language data do not represent current Chinese or Southeast Asian markets and cannot establish live performance.
+- Next, evaluate on independent data not used to refine the rules and examine number formats, language changes and the costs of errors.
+
+## Tools and notes
+
+Tools: SAS Visual Text Analytics and CSV data preparation. The source corpus is public, but raw phone numbers and other personal identifiers should not be included in the portfolio. See the dataset page for source and licence details; permissions for publishing code, course materials and screenshots must be checked separately.
